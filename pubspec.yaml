@@ -1,0 +1,32 @@
+name: varioqub_plugin
+description: "A Flutter plugin for Varioqub. Varioqub is an AB tool that works for Android and iOS."
+version: 0.1.0
+homepage: https://varioqub.ru/
+repository: https://github.com/appmetrica/varioqub-flutter-plugin
+
+environment:
+  sdk: '>=2.14.0 <4.0.0'
+  flutter: '>=2.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  pigeon: ^10.0.0
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+  build_runner: ^2.3.3
+  mockito: ^5.4.0
+
+flutter:
+
+  plugin:
+    platforms:
+      android:
+        package: com.yandex.varioqub.flutter
+        pluginClass: VarioqubPlugin
+      ios:
+        pluginClass: VQFVarioqubPlugin
