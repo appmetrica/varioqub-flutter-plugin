@@ -11,7 +11,7 @@ class VarioqubSettings {
   const VarioqubSettings(
     this.clientId, {
     this.url,
-    this.fetchThrottleIntervalSeconds = 60,
+    this.fetchThrottleIntervalSeconds,
     this.clientFeatures,
     this.logs,
     this.activateEvent,
