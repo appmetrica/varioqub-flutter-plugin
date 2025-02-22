@@ -18,9 +18,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _varioqubId = 'Unknown';
 
+  var _varioqubKeys = <String?>[];
+
   @override
   void initState() {
     super.initState();
+    _initVarioqub();
     initPlatformState();
   }
 
@@ -30,8 +33,7 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      varioqubId =
-          await Varioqub.getId();
+      varioqubId = await Varioqub.getId();
     } on PlatformException {
       varioqubId = 'Failed to get varioqub id.';
     }
@@ -51,12 +53,45 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Varioqub Plugin'),
         ),
-        body: Center(
-          child: Text('Running on: $_varioqubId\n'),
+        body: Column(
+          children: [
+            Text('Running on: $_varioqubId\n'),
+            Text('$_varioqubKeys'),
+          ],
         ),
       ),
     );
+  }
+
+  Future<void> _initVarioqub() async {
+    // Project ID specified as appmetrica.XXXXXX, where XXXXXX is the app ID
+    // from the AppMetrica interface. For example, VarioqubSettings("appmetrica.1234567")
+    const settings = VarioqubSettings('appmetrica.1234567');
+
+    // Initialize the Varioqub library
+    await Varioqub.initVarioqubWithAppMetricaAdapter(settings);
+
+    // Run fetchConfig() in the background to export the new flag values
+    // from the server and activate them when the next session starts.
+    final fetchStatus = await Varioqub.fetchConfig();
+
+    if (fetchStatus.status == 0) {
+      await Varioqub.activateConfig();
+      final keys = await Varioqub.getAllKeys();
+
+      setState(() {
+        _varioqubKeys = keys;
+      });
+
+      // Examples how to get flag values
+      await Varioqub.getBoolean('FEATURE_FLAG_KEY_0', false);
+      await Varioqub.getDouble('FEATURE_FLAG_KEY_1', 1.0);
+      await Varioqub.getInt('FEATURE_FLAG_KEY_2', 1);
+      await Varioqub.getString('FEATURE_FLAG_KEY_3', 'test');
+    } else {
+      debugPrint(fetchStatus.error ?? '');
+    }
   }
 }

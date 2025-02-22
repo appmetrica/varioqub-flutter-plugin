@@ -9,15 +9,14 @@ class VarioqubSettings {
   final bool? activateEvent;
 
   const VarioqubSettings(
-      this.clientId,
-      {
-        this.url,
-        this.fetchThrottleIntervalSeconds,
-        this.clientFeatures,
-        this.logs,
-        this.activateEvent,
-      });
-  
+    this.clientId, {
+    this.url,
+    this.fetchThrottleIntervalSeconds,
+    this.clientFeatures,
+    this.logs,
+    this.activateEvent,
+  });
+
   VarioqubSettingsPigeon toPigeon() {
     return VarioqubSettingsPigeon(
       clientId: clientId,

@@ -7,15 +7,15 @@ class VQFVarioqubImplementation: VarioqubPigeon {
         
         let clientId = settings.clientId!
         let vqConfig = convertPigeonSettingsToVarioqubConfig(settings: settings)
-
+        
         let adapter = AppmetricaAdapter()
-
+        
         VarioqubFacade.shared.initialize(clientId: clientId, config: vqConfig, idProvider: adapter, reporter: adapter)
     }
-
+    
     func fetchConfig(completion: @escaping (Result<FetchStatus, any Error>) -> Void) {
         let varioqub = VarioqubFacade.shared
-
+        
         varioqub.fetchConfig({ status in
             switch status {
             case .success, .cached: completion(.success(FetchStatus(error: "", status: 0)))
@@ -37,50 +37,50 @@ class VQFVarioqubImplementation: VarioqubPigeon {
             }
         })
     }
-
+    
     func activateConfig() {
         VarioqubFacade.shared.activateConfigAndWait()
     }
-
+    
     func getString(key: String, defaultValue: String) throws -> String {
         return VarioqubFacade.shared.getString(for: VarioqubFlag(rawValue: key), defaultValue: defaultValue)
     }
-
+    
     func getBoolean(key: String, defaultValue: Bool) throws -> Bool {
         return VarioqubFacade.shared.getBool(for: VarioqubFlag(rawValue: key), defaultValue: defaultValue)
     }
-
+    
     func getInt(key: String, defaultValue: Int64) throws -> Int64 {
         return VarioqubFacade.shared.getInt64(for: VarioqubFlag(rawValue: key), defaultValue: defaultValue)
     }
-
+    
     func getDouble(key: String, defaultValue: Double) throws -> Double {
         return VarioqubFacade.shared.getDouble(for: VarioqubFlag(rawValue: key), defaultValue: defaultValue)
     }
-
+    
     func getId() throws -> String {
         return VarioqubFacade.shared.varioqubId ?? ""
     }
-
+    
     func putClientFeature(key: String, value: String) throws {
         VarioqubFacade.shared.clientFeatures.setFeature(value, forKey: key)
     }
-
+    
     func clearClientFeatures() throws {
         VarioqubFacade.shared.clientFeatures.clearFeatures()
     }
-
+    
     func getAllKeys() throws -> [String] {
         return Array(VarioqubFacade.shared.allKeys.map({"\($0.rawValue)"}))
     }
-
+    
     func setDefaults(defaults: [String : String]) throws {
         var defaultFlagsMap = [Varioqub.VarioqubFlag : String]()
-
+        
         for (key, value) in defaults {
             defaultFlagsMap[VarioqubFlag(rawValue: key )] = String(describing: value)
         }
-
+        
         VarioqubFacade.shared.setDefaultsAndWait(defaultFlagsMap)
     }
     
@@ -90,7 +90,11 @@ class VQFVarioqubImplementation: VarioqubPigeon {
         if let url = settings.url {
             vqConfig.baseURL = URL(string: url)
         }
-        vqConfig.fetchThrottle = TimeInterval(truncating: settings.fetchThrottleIntervalSeconds! as NSNumber)
+        
+        if let fetchThrottleInterval = settings.fetchThrottleIntervalSeconds {
+            vqConfig.fetchThrottle = TimeInterval(truncating: fetchThrottleInterval as NSNumber)
+        }
+        
         vqConfig.initialClientFeatures = ClientFeatures(dictionary: settings.clientFeatures as? [String: String] ?? [:])
         
         return vqConfig
