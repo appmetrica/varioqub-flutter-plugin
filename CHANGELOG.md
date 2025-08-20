@@ -1,3 +1,5 @@
+- Update AGP version to `8.2.0`.
+
 ## 0.1.0
 
-* Initial Release
+- Initial Release.
