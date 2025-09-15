@@ -13,11 +13,11 @@ A new Flutter project.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*', 'VarioqubPlugin/**/*'
+  s.source_files = 'varioqub_plugin/Sources/varioqub_plugin/**/*.swift'
   s.dependency 'Flutter'
-  s.dependency "Varioqub", "0.7.1"
-  s.dependency "Varioqub/MetricaAdapterReflection", "0.7.1"
-  s.platform = :ios, '12.0'
+  s.dependency 'Varioqub', '~> 1.0'
+  s.dependency 'VarioqubAppMetricaAdapter', '~> 1.0'
+  s.platform = :ios, '13.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }

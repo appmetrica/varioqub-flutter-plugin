@@ -2,7 +2,7 @@ import 'package:pigeon/pigeon.dart';
 
 @ConfigurePigeon(PigeonOptions(
   dartOut: 'lib/src/varioqub_api_pigeon.dart',
-  swiftOut: 'ios/Classes/VQFVarioqubPigeon.swift',
+  swiftOut: 'ios/varioqub_plugin/Sources/varioqub_plugin/VQFVarioqubPigeon.swift',
   javaOut: 'android/src/main/java/com/yandex/varioqub/flutter/pigeon/Pigeon.java',
   javaOptions: JavaOptions(package: 'com.yandex.varioqub.flutter.pigeon'),
 ))

@@ -1,6 +1,6 @@
 import Foundation
 import Varioqub
-import MetricaAdapterReflection
+import VarioqubAppMetricaAdapter
 
 class VQFVarioqubImplementation: VarioqubPigeon {
     func initVarioqubWithAppMetricaAdapter(settings: VarioqubSettingsPigeon) throws {
@@ -8,7 +8,7 @@ class VQFVarioqubImplementation: VarioqubPigeon {
         let clientId = settings.clientId!
         let vqConfig = convertPigeonSettingsToVarioqubConfig(settings: settings)
         
-        let adapter = AppmetricaAdapter()
+        let adapter = AppMetricaAdapter()
         
         VarioqubFacade.shared.initialize(clientId: clientId, config: vqConfig, idProvider: adapter, reporter: adapter)
     }

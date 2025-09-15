@@ -5,10 +5,10 @@ packages:
     dependency: "direct main"
     description:
       name: appmetrica_plugin
-      sha256: "6834ac24cef2f84433069d3e20b1c3c144ddc1879685c8fe72c3fcd73c78aa7c"
+      sha256: "4a06852c78bf976bcf274a7b9ce4dbecfbd219074e0fb2eac094d59803243c19"
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.0"
+    version: "3.3.0"
   async:
     dependency: transitive
     description:
