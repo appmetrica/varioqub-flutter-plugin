@@ -1,4 +1,4 @@
-import 'package:varioqub_plugin/src/varioqub_api_pigeon.dart';
+import 'varioqub_api_pigeon.dart';
 
 class VarioqubSettings {
   final String clientId;
