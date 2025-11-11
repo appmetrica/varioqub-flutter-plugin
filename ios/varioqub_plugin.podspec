@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'varioqub_plugin'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Varioqub SDK for Flutter'
   s.description      = <<-DESC
 A new Flutter project.
