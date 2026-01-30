@@ -89,7 +89,6 @@
   "example/ios/Runner/Runner-Bridging-Header.h":"mobile/metrika/flutter/varioqub_plugin/example/ios/Runner/Runner-Bridging-Header.h",
   "example/ios/RunnerTests/RunnerTests.swift":"mobile/metrika/flutter/varioqub_plugin/example/ios/RunnerTests/RunnerTests.swift",
   "example/lib/main.dart":"mobile/metrika/flutter/varioqub_plugin/example/lib/main.dart",
-  "example/pubspec.lock":"mobile/metrika/flutter/varioqub_plugin/example/pubspec.lock",
   "example/pubspec.yaml":"mobile/metrika/flutter/varioqub_plugin/example/pubspec.yaml",
   "generate_pigeon.sh":"mobile/metrika/flutter/varioqub_plugin/generate_pigeon.sh",
   "ios/.gitignore":"mobile/metrika/flutter/varioqub_plugin/ios/.gitignore",
