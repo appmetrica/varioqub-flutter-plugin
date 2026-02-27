@@ -1,5 +1,7 @@
 ## 0.2.0
 
+- Update minimum Flutter version to 3.38.0 (Dart SDK 3.10.0).
+
 ## 0.1.0
 
 - Support Swift Package Manager feature
