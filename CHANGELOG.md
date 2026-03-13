@@ -1,6 +1,7 @@
 ## 0.2.0
 
 - Update minimum Flutter version to 3.38.0 (Dart SDK 3.10.0).
+- The specification of the native SDK version for iOS has been improved: now it defines a range from the minimum version up to the next major version.
 
 ## 0.1.0
 

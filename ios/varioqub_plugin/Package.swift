@@ -14,11 +14,11 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/appmetrica/varioqub-sdk-ios",
-            from: "1.0.1"
+            .upToNextMajor(from: "1.0.1")
         ),
         .package(
             url: "https://github.com/appmetrica/varioqub-sdk-appmetrica-adapter-ios",
-            from: "1.0.1"
+            .upToNextMajor(from: "1.0.1")
         ),
     ],
     targets: [

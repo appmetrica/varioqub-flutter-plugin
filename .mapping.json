@@ -51,6 +51,7 @@
   "example/ios/Flutter/Debug.xcconfig":"mobile/metrika/flutter/varioqub_plugin/example/ios/Flutter/Debug.xcconfig",
   "example/ios/Flutter/Release.xcconfig":"mobile/metrika/flutter/varioqub_plugin/example/ios/Flutter/Release.xcconfig",
   "example/ios/Podfile":"mobile/metrika/flutter/varioqub_plugin/example/ios/Podfile",
+  "example/ios/Podfile.lock":"mobile/metrika/flutter/varioqub_plugin/example/ios/Podfile.lock",
   "example/ios/Runner.xcodeproj/project.pbxproj":"mobile/metrika/flutter/varioqub_plugin/example/ios/Runner.xcodeproj/project.pbxproj",
   "example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata":"mobile/metrika/flutter/varioqub_plugin/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
   "example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist":"mobile/metrika/flutter/varioqub_plugin/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",

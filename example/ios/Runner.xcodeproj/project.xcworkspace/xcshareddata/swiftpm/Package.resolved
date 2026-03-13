@@ -1,13 +1,12 @@
 {
-  "originHash" : "0c5cb0deb27fc52e7dbd3355c959a602c2a20de93ace4590abefd1af1f1d68b0",
   "pins" : [
     {
       "identity" : "appmetrica-sdk-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/appmetrica/appmetrica-sdk-ios",
       "state" : {
-        "revision" : "4d34ce36bc1fb1fb3a251255aedde3b1dc52e188",
-        "version" : "5.12.1"
+        "revision" : "d6d472de0485c87c3bfe0dd3b57a782132d751ee",
+        "version" : "5.16.0"
       }
     },
     {
@@ -24,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log",
       "state" : {
-        "revision" : "ce592ae52f982c847a4efc0dd881cc9eb32d29f2",
-        "version" : "1.6.4"
+        "revision" : "bbd81b6725ae874c69e9b8c8804d462356b55523",
+        "version" : "1.10.1"
       }
     },
     {
@@ -33,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf",
       "state" : {
-        "revision" : "e3f69fd321d0c9fcdc16fb576a0cdd956675face",
-        "version" : "1.31.0"
+        "revision" : "86970144a0b86068c81ff48ee29b3f97cae0b879",
+        "version" : "1.36.0"
       }
     },
     {
@@ -42,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/appmetrica/varioqub-sdk-appmetrica-adapter-ios",
       "state" : {
-        "revision" : "967750b4c588a87c762be87d096a7964b245c004",
-        "version" : "1.0.1"
+        "revision" : "e1047bd34d41e264ad665a867ee63a5d2c3b817c",
+        "version" : "1.1.2"
       }
     },
     {
@@ -51,10 +50,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/appmetrica/varioqub-sdk-ios",
       "state" : {
-        "revision" : "ee6362cedecb9c490b6c82bbbcd8e61e6858a47e",
-        "version" : "1.0.1"
+        "revision" : "57ea131811afdcb970c5cd6ddd2b9ae21e14c2fc",
+        "version" : "1.1.2"
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
