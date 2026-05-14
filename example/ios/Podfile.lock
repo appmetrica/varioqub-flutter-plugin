@@ -103,12 +103,12 @@ PODS:
     - KSCrash/RecordingCore
   - KSCrash/RecordingCore (2.1.2):
     - KSCrash/Core
-  - SwiftProtobuf (1.36.0)
+  - SwiftProtobuf (1.37.0)
   - Varioqub (1.2.1):
     - Varioqub/Core (= 1.2.1)
   - Varioqub/Core (1.2.1):
     - SwiftProtobuf (~> 1.31)
-  - varioqub_plugin (0.2.0):
+  - varioqub_plugin (0.3.0):
     - Flutter
     - Varioqub (~> 1.0)
     - VarioqubAppMetricaAdapter (~> 1.0)
@@ -190,9 +190,9 @@ SPEC CHECKSUMS:
   AppMetricaWebKit: ea18edee9a1f742f0015888ec97b64e215f88b65
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   KSCrash: bd950ede6c40a50bfc9f246c38a7f3408705fa3c
-  SwiftProtobuf: 4a92c845d4f5ee640b00f962df11222b625095ed
+  SwiftProtobuf: 3fafd1b2fb97e6d95ad9c8adb2215da9afec7c83
   Varioqub: f98d39476d469abde382ca3faab71f3eeca54326
-  varioqub_plugin: f3681212ec7a3c4f04d9a9cb69f5460da291cf27
+  varioqub_plugin: 0992ca64237fc67367e7e37536102d6368ccf909
   VarioqubAppMetricaAdapter: 91770d5e52783c94906981f929e7fd44885d97a8
 
 PODFILE CHECKSUM: b2843243add7abcec34f3d37f90e25a854c59757

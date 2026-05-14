@@ -12,7 +12,7 @@ You can found documentation [here](https://yandex.ru/support/varioqub-app/en/).
 In your flutter project add the following dependency:
 ```
 dependencies:
-  varioqub_plugin: ^0.1.0
+  varioqub_plugin: ^0.3.0
 ```
 ```
 // init varioqub

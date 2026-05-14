@@ -1,3 +1,5 @@
+## 0.3.0
+
 ## 0.2.0
 
 - Update minimum Flutter version to 3.38.0 (Dart SDK 3.10.0).
