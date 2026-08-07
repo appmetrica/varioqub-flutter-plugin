@@ -1,11 +1,16 @@
-## 0.3.0
+```md
+* Version heading: `## `{versionName}``
+* Versions are sorted by semver (newest to oldest)
+```
 
-## 0.2.0
+## `0.3.0`
+
+## `0.2.0`
 
 - Update minimum Flutter version to 3.38.0 (Dart SDK 3.10.0).
 - The specification of the native SDK version for iOS has been improved: now it defines a range from the minimum version up to the next major version.
 
-## 0.1.0
+## `0.1.0`
 
 - Support Swift Package Manager feature
 - Update AGP version to `8.2.0`.
