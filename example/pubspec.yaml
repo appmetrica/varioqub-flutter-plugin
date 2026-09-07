@@ -8,7 +8,7 @@ environment:
   flutter: ">=3.38.0"
 
 dependencies:
-  appmetrica_plugin: ^3.3.0
+  appmetrica_plugin: ^4.1.0
   flutter:
     sdk: flutter
   varioqub_plugin:
