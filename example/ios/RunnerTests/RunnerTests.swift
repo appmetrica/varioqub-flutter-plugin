@@ -1,26 +1,28 @@
-import Flutter
-import UIKit
 import XCTest
-
 @testable import varioqub_plugin
 
-// This demonstrates a simple unit test of the Swift portion of this plugin's implementation.
-//
-// See https://developer.apple.com/documentation/xctest for more information about using XCTest.
+final class RunnerTests: XCTestCase {
 
-class RunnerTests: XCTestCase {
+    func testConvertPigeonSettingsToVarioqubConfig() {
+        let impl = VQFVarioqubImplementation()
+        var settings = VarioqubSettingsPigeon()
+        settings.clientId = "app.client.id"
+        settings.url = "https://example.com/vq"
+        settings.fetchThrottleIntervalSeconds = 90
+        settings.clientFeatures = ["tier": "gold"]
+        settings.logs = true
+        settings.activateEvent = false
 
-  func testGetPlatformVersion() {
-    let plugin = VarioqubPlugin()
-
-    let call = FlutterMethodCall(methodName: "getPlatformVersion", arguments: [])
-
-    let resultExpectation = expectation(description: "result block must be called.")
-    plugin.handle(call) { result in
-      XCTAssertEqual(result as! String, "iOS " + UIDevice.current.systemVersion)
-      resultExpectation.fulfill()
+        let config = impl.convertPigeonSettingsToVarioqubConfig(settings: settings)
+        XCTAssertEqual(config.baseURL?.absoluteString, "https://example.com/vq")
+        XCTAssertEqual(config.fetchThrottle, 90)
     }
-    waitForExpectations(timeout: 1)
-  }
 
+    func testConvertPigeonSettingsKeepsDefaultsWithoutOptionalFields() {
+        let impl = VQFVarioqubImplementation()
+        var settings = VarioqubSettingsPigeon()
+        settings.clientId = "app.client.id"
+        let config = impl.convertPigeonSettingsToVarioqubConfig(settings: settings)
+        XCTAssertNil(config.baseURL)
+    }
 }

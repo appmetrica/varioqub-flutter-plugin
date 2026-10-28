@@ -1,7 +1,5 @@
 package com.yandex.varioqub.flutter;
 
-import android.text.TextUtils;
-
 import com.yandex.varioqub.config.Varioqub;
 import com.yandex.varioqub.config.VarioqubSettings;
 import com.yandex.varioqub.flutter.pigeon.Pigeon;
@@ -25,8 +23,9 @@ class VarioqubSettingsConverter {
 
         VarioqubSettings.Builder settingsBuilder = new VarioqubSettings.Builder(clientId);
 
-        if (!TextUtils.isEmpty(settingsPigeon.getUrl())) {
-            settingsBuilder.withUrl(settingsPigeon.getUrl());
+        String url = settingsPigeon.getUrl();
+        if (url != null && !url.isEmpty()) {
+            settingsBuilder.withUrl(url);
         }
 
         if (settingsPigeon.getFetchThrottleIntervalSeconds() != null) {

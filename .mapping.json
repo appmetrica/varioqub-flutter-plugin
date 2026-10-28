@@ -17,6 +17,7 @@
   "android/src/main/java/com/yandex/varioqub/flutter/VarioqubPlugin.java":"mobile/metrika/flutter/varioqub_plugin/android/src/main/java/com/yandex/varioqub/flutter/VarioqubPlugin.java",
   "android/src/main/java/com/yandex/varioqub/flutter/VarioqubSettingsConverter.java":"mobile/metrika/flutter/varioqub_plugin/android/src/main/java/com/yandex/varioqub/flutter/VarioqubSettingsConverter.java",
   "android/src/main/java/com/yandex/varioqub/flutter/pigeon/Pigeon.java":"mobile/metrika/flutter/varioqub_plugin/android/src/main/java/com/yandex/varioqub/flutter/pigeon/Pigeon.java",
+  "android/src/test/java/com/yandex/varioqub/flutter/VarioqubSettingsConverterTest.kt":"mobile/metrika/flutter/varioqub_plugin/android/src/test/java/com/yandex/varioqub/flutter/VarioqubSettingsConverterTest.kt",
   "example/.gitignore":"mobile/metrika/flutter/varioqub_plugin/example/.gitignore",
   "example/.pubignore":"mobile/metrika/flutter/varioqub_plugin/example/.pubignore",
   "example/.ruby-gemset":"mobile/metrika/flutter/varioqub_plugin/example/.ruby-gemset",
